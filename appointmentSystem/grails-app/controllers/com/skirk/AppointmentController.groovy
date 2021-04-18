@@ -2,5 +2,5 @@ package com.skirk
 
 class AppointmentController {
 
-    def index() { }
+    def scaffold=Appointment
 }

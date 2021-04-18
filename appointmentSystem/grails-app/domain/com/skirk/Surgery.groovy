@@ -4,7 +4,7 @@ class Surgery {
 	String name
 	String address
 	String postcode
-	long telephone
+	String telephone
 	int numberOfPatients
 	String description
 	String openingTime
@@ -18,4 +18,6 @@ class Surgery {
 	description blank:false
 	openingTime blank:false
     }
+	static hasMany = [doctors:Doctor, receptionists:Receptionist, nurses:Nurse, appointments:Appointment]
+	static belongsTo = [Doctor, Appointment, Nurse, Receptionist]
 }

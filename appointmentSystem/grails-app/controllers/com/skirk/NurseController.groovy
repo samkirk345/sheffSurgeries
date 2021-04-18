@@ -2,5 +2,5 @@ package com.skirk
 
 class NurseController {
 
-    def index() { }
+    def scaffold=Nurse
 }

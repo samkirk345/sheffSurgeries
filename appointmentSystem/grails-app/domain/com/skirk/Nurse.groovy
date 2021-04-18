@@ -5,7 +5,7 @@ class Nurse {
 	String qualifications
 	String nurseEmail
 	String nurseOffice
-	long nursePhone
+	String nursePhone
 
     static constraints = {
 	nurseName blank:false
@@ -14,4 +14,6 @@ class Nurse {
 	nurseOffice blank:false
 	nursePhone blank:false, unique:true
     }
+	static belongsTo = [Surgery, Doctor]
+	static hasMany = [doctors:Doctor, surgeries:Surgery]
 }

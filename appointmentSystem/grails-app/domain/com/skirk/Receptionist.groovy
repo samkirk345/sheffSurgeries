@@ -5,7 +5,7 @@ class Receptionist {
 	String recepEmail
 	String recepUsername
 	String recepPassword
-	long recepPhone
+	String recepPhone
 
     static constraints = {
 	recepName blank:false
@@ -14,4 +14,6 @@ class Receptionist {
 	recepPassword blank:false
 	recepPhone blank:false, unique:true
     }
+	static hasMany = [doctors:Doctor, surgeries:Surgery]
+	static belongsTo = [Doctor, Surgery]
 }

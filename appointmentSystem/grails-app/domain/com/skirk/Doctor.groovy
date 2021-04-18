@@ -7,7 +7,7 @@ class Doctor {
 	String doctorEmail
 	String password
 	String doctorOffice
-	long doctorPhone
+	String doctorPhone
 	String bio
 
     static constraints = {
@@ -20,4 +20,6 @@ class Doctor {
 	doctorPhone blank:false, unique:true
 	bio maxSize:3500
     }
+	static belongsTo = [Surgery, Receptionist, Appointment, Patient, Prescription, Nurse]
+	static hasMany = [appointments:Appointment, patients:Patient, prescriptions:Prescription, nurses:Nurse, surgeries:Surgery, receptionists:Receptionist]
 }

@@ -2,5 +2,5 @@ package com.skirk
 
 class ReceptionistController {
 
-    def index() { }
+	def scaffold=Receptionist
 }

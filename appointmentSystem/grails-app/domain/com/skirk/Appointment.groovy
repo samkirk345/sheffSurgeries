@@ -12,4 +12,6 @@ class Appointment {
 	appDuration blank:false
 	roomNumber blank:false
     }
+	static belongsTO = [Doctor, Patient, Surgery]
+	static hasMany = [doctors:Doctor, surgeries:Surgery, patients:Patient]
 }

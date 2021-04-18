@@ -2,5 +2,5 @@ package com.skirk
 
 class PrescriptionController {
 
-    def index() { }
+    def scaffold=Prescription
 }
