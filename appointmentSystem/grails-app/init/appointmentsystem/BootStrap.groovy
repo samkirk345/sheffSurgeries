@@ -4,7 +4,7 @@ class BootStrap {
 
     def init = { servletContext ->
 
-	def surgery1 = new Surgery(
+	/*def surgery1 = new Surgery(
 		name: 'West Street Surgery',
 		address: '1 West Street',
 		postcode: 'S1 1Y1',
@@ -25,7 +25,7 @@ class BootStrap {
 		).save()
 
 	def appointment1 = new Appointment(
-		id: '1',
+		appID: 'A1',
 		appDate: new Date ('01/01/2021'),
 		appTime: '9:00am',
 		appDuration: 15,
@@ -33,7 +33,7 @@ class BootStrap {
 		).save()
 	
 	def appointment2 = new Appointment(
-		id: '2',
+		appID: 'A2',
 		appDate: new Date ('02/01/2021'),
 		appTime: '9:15am',
 		appDuration: 15,
@@ -130,7 +130,7 @@ class BootStrap {
 		recepUsername: 'jbrown2',
 		recepPassword: 'password',
 		recepPhone: '97283 95436'
-		).save()
+		).save()*/
 	}
 
     def destroy = {

@@ -7,9 +7,9 @@ class Prescription {
 	float totalCost
 	Date dateIssued
 	Boolean patientPaying
-	
+
 	String toString(){
-	return pharmacyName
+	return prescripNumber
 	}
 
     static constraints = {

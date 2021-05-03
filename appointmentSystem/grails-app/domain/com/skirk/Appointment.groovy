@@ -1,23 +1,23 @@
 package com.skirk
 
 class Appointment {
-	String id
+	String appID
 	Date appDate
 	String appTime
 	int appDuration
 	String roomNumber
 
 	String toString(){
-	return id
+	return appID
 	}
 
     static constraints = {
-	id blank:false, unique:true
+	appID blank:false, unique:true
 	appDate blank:false
 	appTime blank:false
 	appDuration blank:false
 	roomNumber blank:false
     }
-	static belongsTO = [Doctor, Patient, Surgery]
+	static belongsTo = [Doctor, Patient, Surgery]
 	static hasMany = [doctors:Doctor, surgeries:Surgery, patients:Patient]
 }

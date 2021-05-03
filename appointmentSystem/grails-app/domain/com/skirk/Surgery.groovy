@@ -8,7 +8,7 @@ class Surgery {
 	int numberOfPatients
 	String description
 	String openingTime
-
+	
 	String toString(){
 	return name
 	}
