@@ -7,6 +7,10 @@ class Receptionist {
 	String recepPassword
 	String recepPhone
 
+	String toString(){
+	return recepName
+	}
+
     static constraints = {
 	recepName blank:false
 	recepEmail blank:false, unique:true, email:true

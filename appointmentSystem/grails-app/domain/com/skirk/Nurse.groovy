@@ -7,6 +7,10 @@ class Nurse {
 	String nurseOffice
 	String nursePhone
 
+	String toString(){
+	return nurseName
+	}
+
     static constraints = {
 	nurseName blank:false
 	qualifications blank:false

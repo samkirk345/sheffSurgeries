@@ -9,6 +9,10 @@ class Patient {
 	Date dateRegistered
 	String patientPhone
 
+	String toString(){
+	return patientName
+	}
+
     static constraints = {
 	patientName blank:false
 	patientAddress blank:false
