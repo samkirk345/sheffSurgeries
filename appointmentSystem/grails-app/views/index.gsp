@@ -2,75 +2,103 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Welcome to Grails</title>
+    <asset:stylesheet src="home.css"/>
+    <title>Sheffield Surgeries | Home Page</title>
 </head>
 <body>
-<content tag="nav">
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Application Status <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Environment: ${grails.util.Environment.current.name}</a></li>
-            <li class="dropdown-item"><a href="#">App profile: ${grailsApplication.config.grails?.profile}</a></li>
-            <li class="dropdown-item"><a href="#">App version:
-                <g:meta name="info.app.version"/></a>
-            </li>
-            <li role="separator" class="dropdown-divider"></li>
-            <li class="dropdown-item"><a href="#">Grails version:
-                <g:meta name="info.app.grailsVersion"/></a>
-            </li>
-            <li class="dropdown-item"><a href="#">Groovy version: ${GroovySystem.getVersion()}</a></li>
-            <li class="dropdown-item"><a href="#">JVM version: ${System.getProperty('java.version')}</a></li>
-            <li role="separator" class="dropdown-divider"></li>
-            <li class="dropdown-item"><a href="#">Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artefacts <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Controllers: ${grailsApplication.controllerClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Domains: ${grailsApplication.domainClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Services: ${grailsApplication.serviceClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Installed Plugins <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-                <li class="dropdown-item"><a href="#">${plugin.name} - ${plugin.version}</a></li>
-            </g:each>
-        </ul>
-    </li>
-</content>
 
-<div class="svg" role="presentation">
-    <div class="grails-logo-container">
-        <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
-    </div>
+<div class="row">
+	<asset:image src="banner"/>
 </div>
 
 <div id="content" role="main">
     <section class="row colset-2-its">
-        <h1>Welcome to Grails</h1>
-
-        <p>
-            Congratulations, you have successfully started your first Grails application! At the moment
-            this is the default page, feel free to modify it to either redirect to a controller or display
-            whatever content you may choose. Below is a list of controllers that are currently deployed in
-            this application, click on each to execute its default action:
-        </p>
-
-        <div id="controllers" role="navigation">
-            <h2>Available Controllers:</h2>
-            <ul>
-                <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                    <li class="controller">
-                        <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
-                    </li>
-                </g:each>
-            </ul>
-        </div>
+        <h1>Sheffield Surgeries</h1>
     </section>
+</div>
+
+<div class="first">
+	<h3>Surgery Management</h3>
+<p></p>
+	<button type="button" class="btn btn-info">
+		<g:link controller="surgery" action="create">Add Surgery</g:link>
+	</button>
+
+	<button type="button" class="btn btn-info">
+		<g:link controller="surgery" action="index">View Surgeries</g:link>
+	</button>
+</div>
+
+<div class="second">
+	<h3>Doctor Management</h3>
+<p></p>
+	<button type="button" class="btn btn-info">
+		<g:link controller="doctor" action="create">Add Doctor</g:link>
+	</button>
+
+	<button type="button" class="btn btn-info">
+		<g:link controller="doctor" action="index">View Doctors</g:link>
+	</button>
+</div>
+
+<div class="first">
+	<h3>Patient Management</h3>
+<p></p>
+	<button type="button" class="btn btn-info">
+		<g:link controller="patient" action="create">Add Patient</g:link>
+	</button>
+
+	<button type="button" class="btn btn-info">
+		<g:link controller="patient" action="index">View Patients</g:link>
+	</button>
+</div>
+
+<div class="second">
+	<h3>Receptionist Management</h3>
+<p></p>
+	<button type="button" class="btn btn-info">
+		<g:link controller="receptionist" action="create">Add Receptionist</g:link>
+	</button>
+
+	<button type="button" class="btn btn-info">
+		<g:link controller="receptionist" action="index">View Receptionists</g:link>
+	</button>
+</div>
+
+<div class="first">
+	<h3>Nurse Management</h3>
+<p></p>
+	<button type="button" class="btn btn-info">
+		<g:link controller="nurse" action="create">Add Nurse</g:link>
+	</button>
+
+	<button type="button" class="btn btn-info">
+		<g:link controller="nurse" action="index">View Nurses</g:link>
+	</button>
+</div>
+
+<div class="second">
+	<h3>Appointment Management</h3>
+<p></p>
+	<button type="button" class="btn btn-info">
+		<g:link controller="appointment" action="create">Add Appointment</g:link>
+	</button>
+
+	<button type="button" class="btn btn-info">
+		<g:link controller="appointment" action="index">View Appointments</g:link>
+	</button>
+</div>
+
+<div class="first">
+	<h3>Prescription Management</h3>
+<p></p>
+	<button type="button" class="btn btn-info">
+		<g:link controller="prescription" action="create">Add Prescription</g:link>
+	</button>
+
+	<button type="button" class="btn btn-info">
+		<g:link controller="prescription" action="index">View Prescriptions</g:link>
+	</button>
 </div>
 
 </body>
